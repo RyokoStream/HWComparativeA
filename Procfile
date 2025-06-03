@@ -1,0 +1,1 @@
+web: python lottery_alpha_beta_main.py 
