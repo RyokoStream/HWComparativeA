@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lottery Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        th, td {
+            border: 1px solid #666;
+            padding: 12px 20px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption><strong>デモ用くじ抽選結果</strong></caption>
+        <tr>
+            <th>ID</th>
+            <th>α</th>
+            <th>β</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.alpha }}</td>
+            <td>{{ row.beta }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

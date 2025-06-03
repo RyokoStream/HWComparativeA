@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lottery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input[type="text"] {
+            font-size: 18px;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            font-size: 18px;
+            padding: 5px 15px;
+        }
+        .result {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>くじを引いてください</h1>
+    <form method="post">
+        <label for="participant_id">参加者ID:</label>
+        <input type="text" id="participant_id" name="participant_id" required>
+        <input type="submit" value="くじを引く">
+    </form>
+    {% if result %}
+    <div class="result">
+        <p>参加者ID: <strong>{{ result.id }}</strong></p>
+        <p>α: <strong>{{ result.alpha }}</strong></p>
+        <p>β: <strong>{{ result.beta }}</strong></p>
+    </div>
+    {% endif %}
+</body>
+</html>
